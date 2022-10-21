@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheel Spin</title>
+  </head>
+  <body>
+    <h1>Every color except this one is a win</h1>
+    <a href="testGrid.html">test grid</a>
+    <img
+      src="https://vieuxfourmanago.com/wp-content/uploads/2017/06/Down-Arrow-PNG-HD.png"
+      alt="arrow"
+    />
+    <input id="check" type="checkbox" />
+    <label for="check"></label>
+  </body>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    img {
+      position: absolute;
+      z-index: 20;
+      width: 50px;
+      aspect-ratio: initial;
+      left: calc(50% - 25px);
+      top: 130px;
+    }
+
+    label {
+      background-image: url(https://static.vecteezy.com/system/resources/previews/001/192/278/non_2x/rainbow-spinning-wheel-png.png);
+      height: 400px;
+      aspect-ratio: 1;
+      background-size: contain;
+      transform: rotate(15deg);
+      margin: 10% auto;
+      border: none;
+      display: block;
+      position: relative;
+      transition: transform 7500ms ease;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked ~ label {
+      transform: rotate(1455deg);
+    }
+
+    h1 {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    h1::before {
+      content: "";
+      width: 30px;
+      aspect-ratio: 1;
+      background-color: #8dc63f;
+      position: absolute;
+      left: -40px;
+    }
+  </style>
+</html>
